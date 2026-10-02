@@ -1,0 +1,5 @@
+# Scanner only (on top of gps_denied.parm): the mother is the only drone that
+# estimates position, so the scanner takes its height from her ArUco measurement too,
+# not from its own barometer. It is on the ground inside her view before takeoff,
+# so it has that height before it arms.
+EK3_SRC1_POSZ    6     # height: ExternalNav (sent by the mother)

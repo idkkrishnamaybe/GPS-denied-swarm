@@ -1,0 +1,4 @@
+# Mother only (on top of gps_denied.parm): she has to arm and climb on the barometer
+# before the reference marker is in view, so the "vision data present" arming check
+# is skipped for her. The scanner keeps it and cannot arm without an ArUco position.
+ARMING_SKIPCHK   262144   # bit 18: VisualOdometry

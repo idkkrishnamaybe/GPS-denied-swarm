@@ -1,0 +1,13 @@
+# Simulation only: stand-in optical flow sensor + downward rangefinder.
+# On the real drones, configure the actual flow sensor / lidar drivers instead
+# (e.g. FLOW_TYPE 5 MAVLink or 6 DroneCAN, RNGFND1_TYPE for the lidar).
+FLOW_TYPE        10    # SITL optical flow
+SIM_FLOW_ENABLE  1
+SIM_FLOW_RND     0.02  # flow noise (rad/s)
+RNGFND1_MAX      12    # realistic lidar range; gazebo-iris.parm already sets up the (analog) rangefinder
+RNGFND1_OFFSET   -0.01 # sim sensor reads 0 m when landed; this gives it the 10 cm ground clearance
+RNGFND1_MIN      0.05  #   a real under-mounted lidar has (= RNGFND1_GNDCLR), so the EKF gets a valid
+                       #   height above ground on the pad and flow can hold position from takeoff
+SIM_TERRAIN      0     # flat ground like Gazebo's: with the default (1) SITL measured the simulated
+                       #   rangefinder against SRTM terrain at CMAC, ~1.4 m above Gazebo's ground, so it
+                       #   read ~1.4 m short (0.1 m below 1.5 m) and flow speeds were scaled 20-50 % low

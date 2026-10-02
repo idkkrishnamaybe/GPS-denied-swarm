@@ -1,0 +1,17 @@
+# GPS-denied: ArduPilot navigates on the ArUco localizer's poses instead of GPS.
+# Loaded by run_swarm.sh via sim_vehicle.py --add-param-file (on top of gazebo-iris defaults).
+AHRS_EKF_TYPE    3     # navigate on EKF3 (SITL can default to its perfect 'sim' AHRS, type 10)
+GPS1_TYPE        0     # no GPS
+VISO_TYPE        1     # external navigation over MAVLink (MAVROS vision_pose -> VISION_POSITION_ESTIMATE)
+EK3_SRC1_POSXY   6     # horizontal position: ExternalNav (ArUco)
+EK3_SRC1_VELXY   5     # horizontal velocity: optical flow (keeps the EKF steady when markers drop out)
+EK3_SRC1_POSZ    1     # height: barometer (works before the markers are in view)
+EK3_SRC1_VELZ    0
+EK3_SRC1_YAW     6     # heading: ExternalNav, i.e. the arena frame (compass not used)
+# Fusion weights = how accurate each sensor really is. The ArUco fix is good to 2-3 cm,
+# so it gets more weight than the default. Flow stays at its default: measured in sim
+# (tools/aruco_test/hover_dropout.py) hover wander is 1-2 cm either way, but a 10 s marker
+# dropout drifts 14-39 cm at 0.25 against 60-68 cm at 0.6. (0.6 was chosen while the sim
+# rangefinder read ~1.4 m short and flow speeds were wrong; see sim_flow.parm.)
+VISO_POS_M_NSE   0.05  # ArUco position noise (m); default 0.2
+EK3_FLOW_M_NSE   0.25  # optical-flow noise (rad/s); the default

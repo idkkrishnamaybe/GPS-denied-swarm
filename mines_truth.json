@@ -1,0 +1,149 @@
+{
+ "frame_note": "x, y: Gazebo world; arena_x, arena_y: arena frame of the default layout (origin under Marky spawned at world (-2.7, 0.6), yaw 0)",
+ "mines": [
+  {
+   "id": 0,
+   "kind": "frisbee",
+   "x": 6.797,
+   "y": -1.255,
+   "cls": "mine_disc",
+   "colour": "sand",
+   "diameter": 0.296,
+   "top_z": 0.027,
+   "arena_x": 9.497,
+   "arena_y": -1.855
+  },
+  {
+   "id": 1,
+   "kind": "frisbee",
+   "x": -1.441,
+   "y": -0.36,
+   "cls": "mine_disc",
+   "colour": "dark_green",
+   "diameter": 0.266,
+   "top_z": 0.025,
+   "arena_x": 1.259,
+   "arena_y": -0.96
+  },
+  {
+   "id": 2,
+   "kind": "frisbee",
+   "x": 7.174,
+   "y": 0.575,
+   "cls": "mine_disc",
+   "colour": "black",
+   "diameter": 0.226,
+   "top_z": 0.025,
+   "arena_x": 9.874,
+   "arena_y": -0.025
+  },
+  {
+   "id": 3,
+   "kind": "frisbee",
+   "x": 3.53,
+   "y": -1.928,
+   "cls": "mine_disc",
+   "colour": "grey",
+   "diameter": 0.261,
+   "top_z": 0.03,
+   "arena_x": 6.23,
+   "arena_y": -2.528
+  },
+  {
+   "id": 4,
+   "kind": "frisbee",
+   "x": -0.421,
+   "y": -1.771,
+   "cls": "mine_disc",
+   "colour": "navy",
+   "diameter": 0.295,
+   "top_z": 0.035,
+   "arena_x": 2.279,
+   "arena_y": -2.371
+  },
+  {
+   "id": 5,
+   "kind": "frisbee",
+   "x": 4.821,
+   "y": 0.283,
+   "cls": "mine_disc",
+   "colour": "maroon",
+   "diameter": 0.29,
+   "top_z": 0.037,
+   "arena_x": 7.521,
+   "arena_y": -0.317
+  },
+  {
+   "id": 6,
+   "kind": "frisbee",
+   "x": 2.356,
+   "y": 1.863,
+   "cls": "mine_disc",
+   "colour": "navy",
+   "diameter": 0.239,
+   "top_z": 0.031,
+   "arena_x": 5.056,
+   "arena_y": 1.263
+  },
+  {
+   "id": 7,
+   "kind": "frisbee",
+   "x": 1.316,
+   "y": -1.107,
+   "cls": "mine_disc",
+   "colour": "sand",
+   "diameter": 0.206,
+   "top_z": 0.026,
+   "arena_x": 4.016,
+   "arena_y": -1.707
+  },
+  {
+   "id": 8,
+   "kind": "frisbee",
+   "x": -0.502,
+   "y": 1.231,
+   "cls": "mine_disc",
+   "colour": "black",
+   "diameter": 0.211,
+   "top_z": 0.034,
+   "arena_x": 2.198,
+   "arena_y": 0.631
+  },
+  {
+   "id": 9,
+   "kind": "frisbee",
+   "x": 5.669,
+   "y": -1.897,
+   "cls": "mine_disc",
+   "colour": "black",
+   "diameter": 0.254,
+   "top_z": 0.039,
+   "arena_x": 8.369,
+   "arena_y": -2.497
+  },
+  {
+   "id": 10,
+   "kind": "frisbee",
+   "x": 3.479,
+   "y": 0.797,
+   "cls": "mine_disc",
+   "colour": "khaki",
+   "diameter": 0.287,
+   "top_z": 0.034,
+   "arena_x": 6.179,
+   "arena_y": 0.197
+  },
+  {
+   "id": 11,
+   "kind": "frisbee",
+   "x": 4.764,
+   "y": 2.14,
+   "cls": "mine_disc",
+   "colour": "brown",
+   "diameter": 0.296,
+   "top_z": 0.034,
+   "arena_x": 7.464,
+   "arena_y": 1.54
+  }
+ ]
+}

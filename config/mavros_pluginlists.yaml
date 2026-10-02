@@ -1,0 +1,26 @@
+# MAVROS plugins the swarm actually uses (run_swarm.sh). The stock apm.launch loads
+# ~60 plugins; each of the three MAVROS nodes then burned about half a CPU core, and
+# the param plugin downloads ~1000 parameters at every start (a 1-2 min CPU burst).
+#   sys_status        state, set_mode, set_message_interval
+#   sys_time          time sync
+#   command           arming, takeoff
+#   imu               imu/data (attitude for the localizer, mission, mine detector)
+#   local_position    EKF pose (mission, mine detector, mine map)
+#   global_position   set_gp_origin (EKF origin, no GPS)
+#   setpoint_position position targets
+#   setpoint_raw      attitude targets (the mother's climb)
+#   vision_pose       the ArUco fixes from the localizer
+/**:
+  ros__parameters:
+    plugin_denylist:
+      - '*'
+    plugin_allowlist:
+      - sys_status
+      - sys_time
+      - command
+      - imu
+      - local_position
+      - global_position
+      - setpoint_position
+      - setpoint_raw
+      - vision_pose
